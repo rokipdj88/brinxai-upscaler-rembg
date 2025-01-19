@@ -1,4 +1,4 @@
-👉 BrinXAI - upcaler & rembg Automation installation
+# 👉 BrinXAI - upcaler & rembg Automation installation
 
       how to run brinxai node only upscaler and rembg only
 
