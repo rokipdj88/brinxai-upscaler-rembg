@@ -50,12 +50,11 @@ else
   sudo apt-get install -y docker-ce docker-ce-cli containerd.io
   docker version
 fi
-sleep 5
-# Menambahkan Pengguna ke Grup Docker
+
+# Menambahkan Pengguna ke Grup Docker (tanpa perintah `newgrp docker`)
 sudo groupadd docker &>/dev/null || true
 sudo usermod -aG docker $USER
-newgrp docker
-sleep 3
+
 # Menjalankan node sesuai pilihan
 if [[ $NODE_CHOICE -eq 1 ]]; then
   print_time
