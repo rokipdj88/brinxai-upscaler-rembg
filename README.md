@@ -3,6 +3,7 @@
 how to run brinxai node only upscaler and rembg only
 
 spesification :
+
 ![brinxai](https://github.com/user-attachments/assets/2addd6d8-428a-4b77-b542-e3017cc0b3e6)
 
 
@@ -10,14 +11,16 @@ spesification :
 Official and Source : [BrinxAI Dasboard](https://workers.brinxai.com/dashboard.php)
 
 
-## ⚠️ Important Notes
+### ⚠️ Important Notes
 
 Add your worker on dasboard
-Port Need : 5011
+
+Port open : 5011
+
 Need 10+- minutes to show your node is active
 
 
-## ✨ AUTO INSTALLATION
+### ✨ AUTO INSTALLATION
 
 ## How to run Script
 
