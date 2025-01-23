@@ -42,6 +42,10 @@ sudo apt-get install -y ca-certificates curl
 print_time
 if command -v docker &>/dev/null; then
   echo -e "${BLUE}Docker sudah terinstal.${NC} Melanjutkan ke langkah berikutnya..."
+
+  git clone https://github.com/admier1/BrinxAI-Worker-Nodes && cd BrinxAI-Worker-Nodes && chmod +x install_ubuntu.sh && ./install_ubuntu.sh
+  sleep 3
+  docker pull admier/brinxai_nodes-worker:latest
 else
   echo -e "${RED}Docker belum terinstal.${NC} Menginstal Docker sekarang..."
   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -49,6 +53,10 @@ else
   sudo apt-get update
   sudo apt-get install -y docker-ce docker-ce-cli containerd.io
   docker version
+
+  git clone https://github.com/admier1/BrinxAI-Worker-Nodes && cd BrinxAI-Worker-Nodes && chmod +x install_ubuntu.sh && ./install_ubuntu.sh
+  sleep 3
+  docker pull admier/brinxai_nodes-worker:latest
 fi
 
 # Menambahkan Pengguna ke Grup Docker (tanpa perintah `newgrp docker`)
