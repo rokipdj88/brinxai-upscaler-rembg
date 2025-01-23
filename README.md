@@ -17,7 +17,7 @@ Add your worker on dasboard
 
 Port open : 5011
 
-Need 10+- minutes to show your node is active
+Delay need more than 10 minutes to show your node is active
 
 
 ### ✨ AUTO INSTALLATION
