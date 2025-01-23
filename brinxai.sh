@@ -38,12 +38,14 @@ echo -e "Memperbarui sistem..."
 sudo apt update && sudo apt upgrade -y
 sudo apt-get install -y ca-certificates curl
 
+rm -rf ~/BrinxAI-Worker-Nodes
+
 # Periksa Apakah Docker Sudah Terinstal
 print_time
 if command -v docker &>/dev/null; then
   echo -e "${BLUE}Docker sudah terinstal.${NC} Melanjutkan ke langkah berikutnya..."
 
-  git clone https://github.com/admier1/BrinxAI-Worker-Nodes && cd BrinxAI-Worker-Nodes && chmod +x install_ubuntu.sh && ./install_ubuntu.sh
+  git clone https://github.com/admier1/BrinxAI-Worker-Nodes && cd ~/BrinxAI-Worker-Nodes && chmod +x install_ubuntu.sh && ./install_ubuntu.sh
   sleep 3
   docker pull admier/brinxai_nodes-worker:latest
 else
@@ -54,7 +56,7 @@ else
   sudo apt-get install -y docker-ce docker-ce-cli containerd.io
   docker version
 
-  git clone https://github.com/admier1/BrinxAI-Worker-Nodes && cd BrinxAI-Worker-Nodes && chmod +x install_ubuntu.sh && ./install_ubuntu.sh
+  git clone https://github.com/admier1/BrinxAI-Worker-Nodes && cd ~/BrinxAI-Worker-Nodes && chmod +x install_ubuntu.sh && ./install_ubuntu.sh
   sleep 3
   docker pull admier/brinxai_nodes-worker:latest
 fi
