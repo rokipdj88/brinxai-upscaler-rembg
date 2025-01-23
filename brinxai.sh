@@ -46,6 +46,8 @@ if command -v docker &>/dev/null; then
   rm -rf ~/BrinxAI-Worker-Nodes
   git clone https://github.com/admier1/BrinxAI-Worker-Nodes && cd ~/BrinxAI-Worker-Nodes && chmod +x install_ubuntu.sh && ./install_ubuntu.sh
   sleep 3
+  docker-compose up -d
+  sleep 3
   docker pull admier/brinxai_nodes-worker:latest
 else
   echo -e "${RED}Docker belum terinstal.${NC} Menginstal Docker sekarang..."
@@ -56,6 +58,7 @@ else
   docker version
   rm -rf ~/BrinxAI-Worker-Nodes
   git clone https://github.com/admier1/BrinxAI-Worker-Nodes && cd ~/BrinxAI-Worker-Nodes && chmod +x install_ubuntu.sh && ./install_ubuntu.sh
+  docker-compose up -d
   sleep 3
   docker pull admier/brinxai_nodes-worker:latest
 fi
