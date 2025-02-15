@@ -31,6 +31,34 @@ copy and paste this command into your terminal:
 wget https://github.com/rokipdj88/brinxai-upscaler-rembg/raw/main/brinxai.sh -O brinxai.sh && chmod +x brinxai.sh && ./brinxai.sh
 ```
 
+## If you want add some model here command
+
+Turn on manual node model
+
+For 'text-ui' service
+```bash
+docker run -d --name text-ui --network brinxai-network --cpus=4 --memory=4096m -p 127.0.0.1:5000:5000 admier/brinxai_nodes-text-ui:latest
+```
+
+For 'stable-diffusion' service
+```bash
+docker run -d --name stable-diffusion --network brinxai-network --cpus=8 --memory=8192m -p 127.0.0.1:5050:5050 admier/brinxai_nodes-stabled:latest
+```
+
+For 'rembg' service
+```bash
+docker run -d --name rembg --network brinxai-network --cpus=2 --memory=2048m -p 127.0.0.1:7000:7000 admier/brinxai_nodes-rembg:latest
+```
+
+For 'upscaler' service
+```bash
+docker run -d --name upscaler --network brinxai-network --cpus=2 --memory=2048m -p 127.0.0.1:3000:3000 admier/brinxai_nodes-upscaler:latest
+```
+
+For 'Relay node' 1194/udp Port
+```bash
+sudo docker run -d --name brinxai_relay --cap-add=NET_ADMIN -p 1194:1194/udp admier/brinxai_nodes-relay:latest
+```
 
 
 ## 🎨 Understanding the Colors
